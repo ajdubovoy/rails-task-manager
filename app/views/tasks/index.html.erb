@@ -1,0 +1,10 @@
+<div class="container">
+<h1>My Tasks</h1>
+
+<ul class="list-group">
+<% @tasks.each do |task| %>
+  <% check = task.completed ? "<i class='far fa-check-square'></i>" : "<i class='far fa-square'></i>" %>
+  <li class="list-group-item"><%= raw  "#{check} #{task.title}" %></li>
+<% end %>
+</ul>
+</div>
