@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   get '/tasks/new', to: 'tasks#new', as: :new_task
   get '/tasks/:id', to: 'tasks#show', as: :task
   post '/tasks', to: 'tasks#create'
+  patch '/restaurants/:id', to: 'restaurants#update'
+  get 'restaurants/:id/edit', to: 'restaurants#edit', as: :edit_task
 end
