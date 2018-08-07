@@ -1,0 +1,8 @@
+<div class="container">
+  <% check = @task.completed ? "<i class='far fa-check-square'></i>" : "<i class='far fa-square'></i>" %>
+  <h1><%= raw check %> <%= @task.title %></h1>
+  <div class="jumbotron">
+    <%= @task.details %>
+  </div>
+  <%= link_to "Back to the list", tasks_path, class: "btn btn-primary" %>
+</div>

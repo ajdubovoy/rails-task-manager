@@ -4,7 +4,7 @@
 <ul class="list-group">
 <% @tasks.each do |task| %>
   <% check = task.completed ? "<i class='far fa-check-square'></i>" : "<i class='far fa-square'></i>" %>
-  <li class="list-group-item"><%= raw  "#{check} #{task.title}" %></li>
+  <li class="list-group-item"><%= raw  check %> <%= link_to task.title, task_path(task) %></li>
 <% end %>
 </ul>
 </div>
